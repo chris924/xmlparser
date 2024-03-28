@@ -3,19 +3,16 @@ user_inputs = []
 
 def askForInput():
 
-    fileName = input("Type in the file name without .xls:")
+    fileName = input("Type in the file name without .xls :")
 
-    user_inputs.append(fileName)
-
-    user_input = input("Name by you want to search (the tree(s) that contains childrens):")
-    user_inputs.append(user_input)
-
+    counter = 1
 
     while True:
-        user_input = input("Specific tag name:")
+        user_input = input(f"Specific tag name {counter}: ")
         if user_input == "":
             break
         else:
             user_inputs.append(user_input)
+            counter = counter + 1
     
-    return user_inputs
+    return user_inputs, fileName
